@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QADAZ Landing</title>
+    <meta name="description" content="QADAZ шығармашылықтан тегін консультация. Тіркел де, тегін курс ал!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- HERO SECTION WITH IMAGE -->
+        <section class="hero" id="home" aria-label="Hero">
+            <div class="hero-image-container">
+                <img src="./images/IMG_1458.jpg" alt="QADAZ Creative Consultation" class="hero-image">
+                <div class="image-overlay"></div>
+                <div class="hero-button-container">
+                    <a href="#" class="btn btn-primary btn-lg js-open-modal">ТІРКЕЛУ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMER SECTION -->
+        <section class="timer-section" aria-live="polite">
+            <div class="container fade-up">
+                <div class="timer-box">
+                    <p class="timer-title">Консультацияға тіркеліп, тегін курс алуға қалған уақыт:</p>
+                    <div id="countdown" class="countdown" role="timer" aria-label="Countdown">02:00</div>
+                    <p id="timerStatus" class="timer-status"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL FORM -->
+    <div class="modal" id="formModal" aria-hidden="true" role="dialog" aria-labelledby="form-title">
+        <div class="modal__backdrop" data-close></div>
+        <div class="modal__dialog" role="document">
+            <button class="modal__close" type="button" aria-label="Жабу" data-close>×</button>
+            <h2 id="form-title">Тегін консультацияға тіркелу анкетасы</h2>
+            <form id="leadForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Есімің?</label>
+                    <input type="text" id="name" name="name" required placeholder="Атыңды енгіз">
+                    <span class="error" data-for="name"></span>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Қай сыныптасың?</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="grade" value="11 сынып" required> 11 сынып</label>
+                        <label><input type="radio" name="grade" value="10 сынып"> 10 сынып</label>
+                        <label><input type="radio" name="grade" value="9 сынып"> 9 сынып</label>
+                    </div>
+                    <span class="error" data-for="grade"></span>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Қай мамандыққа түскің келеді?</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="major" value="Журналистика" required> Журналистика</label>
+                        <label><input type="radio" name="major" value="Архитектура & Дизайн"> Архитектура &
+                            Дизайн</label>
+                        <label><input type="radio" name="major" value="Актерский & Режиссура"> Актерский &
+                            Режиссура</label>
+                        <label><input type="radio" name="major" value="Басқа"> Басқа</label>
+                    </div>
+                    <span class="error" data-for="major"></span>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="phone">Байланыс номерің?</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 7xx xxx xx xx" inputmode="tel">
+                    <span class="error" data-for="phone"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg2">ТІРКЕЛУ</button>
+                <p class="form-note">Тіркеліп, бірден ТЕГІН КУРСКА доступ ал!</p>
+                <p class="success-message" id="successMessage" hidden>Сәтті тіркелдің! Біз хабарласамыз 👋</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="./images/logo.png" alt="QADAZ logo" class="logo">
+                <br>
+                <p>ИП "QADAZ"</p>
+                <p>Адрес: г.Казахстан, г. Астана, ЖИЛОЙ МАССИВ ЮГО-ВОСТОК (ПРАВАЯ СТОРОНА), УЛИЦА ҚҰНДЫЗДЫ, 2</p>
+                <p>БИН(ИИН): 020912551514</p>
+                <p>Банк: АО "Kaspi Bank"</p>
+                <p>БИК: CASPKZKA</p>
+                <br>
+                <p>Контакты:<br>+7 708 220 24 53<br>Почта: <a href="mailto:qadaz.media@mail.ru">qadaz.media@mail.ru</a>
+                </p>
+                <br>
+                <p>Договора:
+                    <br>
+                    <a href="https://qadaz.kz/privacy" target="_blank" rel="noopener">Политика конфеденциальности</a>
+                    <br>
+                    <a href="https://qadaz.kz/offer" target="_blank" rel="noopener">Договор оферты</a>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>

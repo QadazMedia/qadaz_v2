@@ -1,0 +1,344 @@
+:root {
+    --accent: #F7A600;
+    --text: #ffffff;
+    --muted: #cfcfcf;
+    --bg: #000000;
+    --bg-2: #111111;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Open Sans', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero with Image */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-button-container {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 100px;
+    font-size: 45px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background .2s ease
+}
+
+.btn-lg {
+    padding: 20px 100px;
+    font-size: 45px;
+    border-radius: 40px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #1a1a1a;
+    box-shadow: 0 8px 24px rgba(247, 166, 0, 0.35)
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(247, 166, 0, 0.45)
+}
+
+.btn-primary:active {
+    transform: translateY(0)
+}
+
+/* Form Section */
+.form-section {
+    padding: 64px 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(17, 17, 17, 0.6))
+}
+
+.form-section h2 {
+    text-align: center;
+    margin: 0 0 28px;
+    font-size: clamp(22px, 4vw, 32px)
+}
+
+form {
+    max-width: 780px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 22px
+}
+
+.form-group {
+    margin-bottom: 18px
+}
+
+label,
+legend {
+    display: block;
+    margin: 0 0 8px;
+    font-weight: 600
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 14px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    outline: none
+}
+
+input::placeholder {
+    color: #9a9a9a
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer
+}
+
+.radio-group input {
+    accent-color: var(--accent)
+}
+
+.error {
+    display: block;
+    color: #ff9a9a;
+    margin-top: 6px;
+    font-size: 13px;
+    min-height: 18px
+}
+
+.form-note {
+    text-align: center;
+    color: var(--muted);
+    margin: 10px 0 0
+}
+
+.success-message {
+    text-align: center;
+    color: #9effa5;
+    margin: 10px 0 0;
+    font-weight: 600
+}
+
+form .btn {
+    width: 100%;
+    margin-top: 6px
+}
+
+/* Timer */
+.timer-section {
+    padding: 40px 0;
+    background: #0b0b0b
+}
+
+.timer-title {
+    text-align: center;
+    margin: 0 0 12px;
+    color: var(--muted)
+}
+
+.countdown {
+    font-weight: 800;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    background-color: var(--accent);
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+
+.timer-status {
+    text-align: center;
+    margin-top: 8px;
+    color: var(--muted)
+}
+
+.timer-box {
+    border: 1px solid rgba(247, 166, 0, 0.35);
+    border-radius: 14px;
+    padding: 18px 20px;
+    background: linear-gradient(180deg, rgba(247, 166, 0, 0.05), rgba(247, 166, 0, 0.02));
+    box-shadow: 0 6px 18px rgba(247, 166, 0, 0.12);
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-2);
+    padding: 32px 0
+}
+
+.footer p {
+    line-height: 1.5;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.footer .footer-content {
+    font-size: 13px;
+    color: var(--text);
+    opacity: 0.95
+}
+
+.footer a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+.footer a:hover {
+    text-decoration: underline
+}
+
+/* Fade-in on scroll */
+.fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease, transform .6s ease
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+/* Responsive */
+@media (max-width:768px) {
+    .navbar .container {
+        height: 64px
+    }
+
+    .logo {
+        height: 34px
+    }
+
+    .btn-lg {
+        padding: 20px 100px;
+        font-size: 28px;
+        opacity: 0;
+        pointer-events: auto;
+    }
+    .btn-lg2 {
+        padding: 20px 100px;
+        font-size: 28px;
+    }
+
+    form {
+        padding: 16px
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none
+}
+
+.modal.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px
+}
+
+.modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px)
+}
+
+.modal__dialog {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: auto;
+    background: rgba(17, 17, 17, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 22px
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1
+}
