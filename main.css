@@ -287,8 +287,9 @@ form .btn {
         pointer-events: auto;
     }
     .btn-lg2 {
-        padding: 20px 100px;
+        padding: 20px 30px;
         font-size: 28px;
+        text-align: center;
     }
 
     form {
